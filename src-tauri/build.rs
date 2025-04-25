@@ -7,24 +7,24 @@ fn main() {
     // 🔧 Crear carpeta si no existe
     if let Some(parent) = mpv_path.parent() {
         if !parent.exists() {
-            create_dir_all(parent).expect("No se pudo crear la carpeta resources");
+            create_dir_all(parent).expect("The folder creation failed.");
         }
     }
     if !mpv_path.exists() {
-        println!("cargo:warning=mpv.exe no encontrado, descargando...");
+        println!("cargo:warning=mpv.exe NOT FOUND, downloading...");
 
         let url = "https://github.com/lusiulis/wallpaper.is/releases/download/mpv/mpv.exe";
 
-        let mut response = reqwest::blocking::get(url).expect("Fallo al descargar mpv.exe");
-        let mut out_file = File::create(&mpv_path).expect("No se pudo crear mpv.exe");
+        let mut response = reqwest::blocking::get(url).expect("Failed to download mpv.exe");
+        let mut out_file = File::create(&mpv_path).expect("mpv.exe creation failed.");
 
         response
             .copy_to(&mut out_file)
-            .expect("No se pudo guardar mpv.exe");
+            .expect("mpv.exe copy failed.");
 
-        println!("cargo:warning=mpv.exe descargado correctamente.");
+        println!("cargo:warning=mpv.exe downloaded successfully.");
     } else {
-        println!("cargo:warning=mpv.exe ya existe, se omite la descarga.");
+        println!("cargo:warning=mpv.exe already exists.");
     }
 
     tauri_build::build()
