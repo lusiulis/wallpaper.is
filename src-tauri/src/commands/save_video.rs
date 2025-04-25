@@ -1,4 +1,3 @@
-use std::{fs, path::Path};
 use tauri::AppHandle;
 
 use crate::fs_utils::get_videos_dir;
