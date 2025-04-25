@@ -1,4 +1,4 @@
-use std::{process::Command, thread::sleep, time::Duration};
+use std::process::Command;
 use tauri::{path::BaseDirectory, AppHandle, Manager};
 use windows::core::s;
 use windows::Win32::{
@@ -6,7 +6,7 @@ use windows::Win32::{
     UI::WindowsAndMessaging::*,
 };
 
-use crate::windows_utils::{enum_window, find_window_by_class};
+use crate::windows_utils::{enum_window, wait_for_mpv_window};
 
 #[tauri::command]
 pub fn set_video_as_wallpaper(app: AppHandle, video_path: String) -> Result<(), String> {
@@ -33,9 +33,8 @@ pub fn set_video_as_wallpaper(app: AppHandle, video_path: String) -> Result<(), 
         .spawn()
         .map_err(|e| format!("Error al iniciar MPV: {}", e))?;
 
-    sleep(Duration::from_secs(2));
-
-    let mpv_window: HWND = find_window_by_class("mpv").ok_or("No se encontró la ventana de mpv")?;
+    let mpv_window: HWND = wait_for_mpv_window()
+        .ok_or("No se encontró la ventana de mpv dentro del tiempo límite")?;
 
     unsafe {
         let progman = FindWindowA(s!("Progman"), None).unwrap();
