@@ -26,9 +26,11 @@ src-tauri/Cargo.lock
 src-tauri/.tauri-build
 src-tauri/.tauri-build.*
 
-
 # Tauri build artifacts
 /src-tauri/bundled
+
+#mpv
+src-tauri/resources/mpv/mpv.exe*
 
 # macOS
 .DS_Store
