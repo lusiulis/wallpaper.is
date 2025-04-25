@@ -1,0 +1,40 @@
+.button {
+  padding: 1em 2em;
+  border-radius: 1em;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  max-width: 200px;
+
+  transition: all ease-in-out 0.3s;
+
+  &:hover {
+    transform: translateY(5px);
+  }
+}
+
+.Purple {
+  background-color: #8a44a3;
+  box-shadow: -4px -4px 0 #632778;
+}
+
+.Green {
+  background-color: #58daa6;
+  box-shadow: -4px -4px 0 #099579;
+}
+
+.Orange {
+  background-color: #d86d08;
+  box-shadow: -4px -4px 0 #7a4410;
+}
+
+.White {
+  background-color: white;
+  box-shadow: -4px -4px 0 #8a8a8a;
+}
+
+.Red {
+  background-color: red;
+  box-shadow: -4px -4px 0 rgb(136, 0, 0);
+}

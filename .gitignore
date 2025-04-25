@@ -1,0 +1,41 @@
+# Node.js
+node_modules/
+dist/
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite / Webpack / other frontend tools
+.vite/
+.cache/
+build/
+*.local
+
+# Rust / Cargo
+target/
+**/*.rs.bk
+
+# Tauri-specific
+/src-tauri/target/
+src-tauri/.cargo-lock.json
+src-tauri/Cargo.lock
+src-tauri/.tauri-build
+src-tauri/.tauri-build.*
+
+
+# Tauri build artifacts
+/src-tauri/bundled
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Linux
+*.swp
