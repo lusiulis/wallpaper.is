@@ -147,36 +147,6 @@ fn set_video_as_wallpaper(app: tauri::AppHandle, video_path: String) -> Result<(
             )), // Si hubo un error
         }
     }
-    /*
-    // Establecer MPV como fondo de escritorio
-    let result = unsafe { SetParent(mpv_window, Some(progman)) };
-
-    println!("Result: {:?}", result);
-
-    let result2 = unsafe {
-        SetWindowPos(
-            mpv_window,        // ventana de mpv
-            Some(HWND_BOTTOM), // ponerla debajo de todas
-            0,
-            0,
-            0,
-            0, // coordenadas ignoradas por flags
-            SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE | SWP_SHOWWINDOW,
-        )
-        .ok()
-        .expect("Error al posicionar ventana");
-    };
-
-    println!("Result2: {:?}", result2);
-
-    match result {
-        Ok(_) => Ok(()), // Si la operación fue exitosa
-        Err(e) => Err(format!(
-            "No se pudo establecer la ventana de MPV como fondo: {}",
-            e
-        )), // Si hubo un error
-    }
-     */
 }
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 #[tauri::command]
