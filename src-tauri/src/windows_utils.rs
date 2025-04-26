@@ -1,9 +1,20 @@
 use std::os::windows::ffi::OsStrExt;
+use std::{thread::sleep, time::Duration};
+use windows::core::{s, BOOL, PCWSTR};
 use windows::Win32::{
-    Foundation::{ HWND, LPARAM}, 
+    Foundation::{HWND, LPARAM},
     UI::WindowsAndMessaging::*,
 };
-use windows::core::{s, BOOL, PCWSTR};
+
+pub fn wait_for_mpv_window() -> Option<HWND> {
+    let mut mpv_window: Option<HWND> = None;
+
+    while mpv_window.is_none() {
+        mpv_window = find_window_by_class("mpv");
+        sleep(Duration::from_millis(100)); // Esperar brevemente antes de comprobar nuevamente
+    }
+    mpv_window
+}
 
 pub fn find_window_by_class(class_name: &str) -> Option<HWND> {
     let wide: Vec<u16> = std::ffi::OsString::from(class_name)
