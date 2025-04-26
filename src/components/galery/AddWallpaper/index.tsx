@@ -29,15 +29,12 @@ const AddWallpaper = () => {
 
     // Leer el archivo como un array de bytes
     const reader = new FileReader();
-    
-    console.log('hello? 1');
     reader.onload = async (event) => {
       if (event.target?.result) {
         const buffer = new Uint8Array(event.target.result as ArrayBuffer); // El buffer del archivo
         const fileName = selectedFile.name;
 
         try {
-          console.log('hello?');
           // Llamar al comando Tauri para guardar el archivo
           const videoPath = await invoke('save_video_from_buffer', {
             buffer: Array.from(buffer), // Convertir el buffer a un array de números
