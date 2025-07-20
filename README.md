@@ -1,4 +1,5 @@
-# Wallpaper Engine Like App (Tauri + React + Typescript)
+
+<h1 align="center">🌟 Windows Wallpaper engine like app ((: 🌟</h1>
 
 This template should help get you started developing with Tauri, React and Typescript in Vite.
 
@@ -41,9 +42,6 @@ This template should help get you started developing with Tauri, React and Types
 <!--🎨CAPSULE / 🌐WEBSITES: https://github.com/kyechan99/capsule-render -->
 <p align="center">
 <img src="https://capsule-render.vercel.app/api?type=shark&height=30&section=footer&reversal=false&color=0:b579da,100:79da7f">
-
-
-<h1 align="center">🌟 Tauri Desktop App Boilerplate 🌟</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/tauri-v2-blue.svg" alt="Tauri v2" />
