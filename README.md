@@ -107,17 +107,5 @@ npm install
 cargo install tauri-cli
 ```
 
-## ❤️ Credits
-
-  Tauri
-  
-  React
-  
-  Vite
-  
-  TypeScript
-  
-  SCSS
-
-📜 License
+## 📜 License
 MIT © 2025 — lu.is
