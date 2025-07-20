@@ -56,6 +56,8 @@ pub fn play_video(video_path: &str, mpv_path: PathBuf) -> Result<String, String>
             "--idle=yes",
             "--force-window=yes",
             "--no-border",
+            "--fs",
+            "--no-keepaspect",
             "--geometry=100%x100%",
             "--osc=no",
             "--no-input-default-bindings",

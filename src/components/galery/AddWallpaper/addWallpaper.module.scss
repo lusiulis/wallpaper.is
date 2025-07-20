@@ -3,12 +3,14 @@
   width: 100%;
 
   .inputContainer {
+    font-weight: bolder;
+    font-size: larger;
     display: flex;
     width: 100%;
     background-color: white;
     border-radius: 20px;
-    overflow: hidden;
-    height: 100px;
+    padding: 0px;
+    height: 80px;
     align-items: center;
     justify-content: space-between;
 
@@ -26,8 +28,8 @@
     .customLabel {
       background-color: black;
       color: white;
-      border-radius: 20px 0px 0px 20px;
       height: 100%;
+      border-radius: 18px;
       width: 20%;
       cursor: pointer;
       font-weight: bold;
@@ -38,7 +40,26 @@
 
       &:hover {
         background-color: #d86d08;
+        color: black;
       }
+    }
+  }
+
+  .fun {
+    margin-left: 10px;
+    width: 40%;
+    display: flex;
+    height: 80px;
+    align-items: flex-end;
+    justify-content: space-between;
+    
+    
+    .block {
+      height: 10vh;
+      width: 10vh ;
+      margin: 5px;
+      background-color: white;
+      border-radius: 10px;
     }
   }
 }
