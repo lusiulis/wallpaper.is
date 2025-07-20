@@ -1,7 +1,7 @@
 
 <h1 align="center">🌟 Windows Wallpaper engine like app ((: 🌟</h1>
 
-This is a in develpment vite / tauri / react app. Feel free to check it out, dont be shy copy & paste!
+This is a in development vite / tauri / react app. Feel free to check it out, dont be shy copy & paste!
 
 ## Recommended IDE Setup
 
@@ -82,3 +82,42 @@ rustup --version
 
 # Tauri CLI (global)
 cargo install tauri-cli
+```
+
+## 📁 Project Structure
+  📦 src-tauri         → Rust backend (commands, Tauri config, SQLite, etc.)
+  📦 src               → React frontend
+   ┣ 📁 assets         → Static files
+   ┣ 📁 components     → Reusable UI components
+   ┣ 📁 styles         → SCSS modules
+   ┣ 📁 views          → Pages or routed views
+   ┗ 📜 main.tsx       → Entry point
+
+## 🔧 Set Up
+
+```bash
+# Git Repo
+git clone https://github.com/tu-usuario/tu-repo.git](https://github.com/lusiulis/wallpaper.is.git
+cd wallpaper.is
+
+# Install frontend deps
+npm install
+
+# Tauri CLI (global)
+cargo install tauri-cli
+```
+
+## ❤️ Credits
+
+  Tauri
+  
+  React
+  
+  Vite
+  
+  TypeScript
+  
+  SCSS
+
+📜 License
+MIT © 2025 — lu.is
