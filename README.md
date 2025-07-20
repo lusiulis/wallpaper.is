@@ -1,7 +1,7 @@
 
 <h1 align="center">🌟 Windows Wallpaper engine like app ((: 🌟</h1>
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+This is a in develpment vite / tauri / react app. Feel free to check it out, dont be shy copy & paste!
 
 ## Recommended IDE Setup
 
