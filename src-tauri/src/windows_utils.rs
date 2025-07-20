@@ -6,17 +6,7 @@ use windows::Win32::{
     UI::WindowsAndMessaging::*,
 };
 
-pub fn wait_for_mpv_window() -> Option<HWND> {
-    let mut mpv_window: Option<HWND> = None;
-
-    while mpv_window.is_none() {
-        mpv_window = find_window_by_class("mpv");
-        sleep(Duration::from_millis(100)); // Esperar brevemente antes de comprobar nuevamente
-    }
-    mpv_window
-}
-
-pub fn find_window_by_class(class_name: &str) -> Option<HWND> {
+fn find_window_by_class(class_name: &str) -> Option<HWND> {
     let wide: Vec<u16> = std::ffi::OsString::from(class_name)
         .as_os_str()
         .encode_wide()
@@ -28,6 +18,16 @@ pub fn find_window_by_class(class_name: &str) -> Option<HWND> {
         Ok(hwnd) if !hwnd.is_invalid() => Some(hwnd),
         _ => None,
     }
+}
+
+pub fn wait_for_mpv_window() -> Option<HWND> {
+    let mut mpv_window: Option<HWND> = None;
+
+    while mpv_window.is_none() {
+        mpv_window = find_window_by_class("mpv");
+        sleep(Duration::from_millis(100)); // Esperar brevemente antes de comprobar nuevamente
+    }
+    mpv_window
 }
 
 pub extern "system" fn enum_window(window: HWND, ref_worker_w: LPARAM) -> BOOL {
