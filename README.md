@@ -1,4 +1,4 @@
-# Tauri + React + Typescript
+# Wallpaper Engine Like App (Tauri + React + Typescript)
 
 This template should help get you started developing with Tauri, React and Typescript in Vite.
 
@@ -41,3 +41,46 @@ This template should help get you started developing with Tauri, React and Types
 <!--🎨CAPSULE / 🌐WEBSITES: https://github.com/kyechan99/capsule-render -->
 <p align="center">
 <img src="https://capsule-render.vercel.app/api?type=shark&height=30&section=footer&reversal=false&color=0:b579da,100:79da7f">
+
+
+<h1 align="center">🌟 Tauri Desktop App Boilerplate 🌟</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/tauri-v2-blue.svg" alt="Tauri v2" />
+  <img src="https://img.shields.io/badge/react-18-blue?logo=react" alt="React 18" />
+  <img src="https://img.shields.io/badge/typescript-✓-blue?logo=typescript" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/scss-%23c6538c.svg?style=flat&logo=sass&logoColor=white" alt="SCSS" />
+</p>
+
+<p align="center">
+  ✨ Cross-platform desktop app built with <strong>Tauri v2</strong>, <strong>React</strong>, <strong>TypeScript</strong>, and <strong>SCSS</strong> ✨
+</p>
+
+---
+
+## 🧠 Features
+
+- ⚡ **Blazing fast** Tauri + Vite + React setup
+- 🧩 Modular TypeScript architecture
+- 🎨 Custom styles with SCSS modules
+- 🖥️ Native-feeling desktop experience
+- 🔐 Secure backend/frontend isolation
+- 🔧 SQLite-ready backend integration
+
+---
+
+## 🚀 Getting Started
+
+### 1. 📦 Prerequisites
+
+> Make sure you have the following installed:
+
+```bash
+# Node.js (v18 or later recommended)
+node -v
+
+# Rust toolchain
+rustup --version
+
+# Tauri CLI (global)
+cargo install tauri-cli
