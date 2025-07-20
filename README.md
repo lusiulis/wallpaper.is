@@ -51,7 +51,7 @@ This is a in develpment vite / tauri / react app. Feel free to check it out, don
 </p>
 
 <p align="center">
-  ✨ Cross-platform desktop app built with <strong>Tauri v2</strong>, <strong>React</strong>, <strong>TypeScript</strong>, and <strong>SCSS</strong> ✨
+  ✨ Windows desktop app built with <strong>Tauri v2</strong>, <strong>React</strong>, <strong>TypeScript</strong>, and <strong>SCSS</strong> ✨
 </p>
 
 ---
