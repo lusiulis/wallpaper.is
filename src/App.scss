@@ -18,7 +18,12 @@
 
 body {
   margin: 0;
+
+  * {
+    margin: 0;
+  }
 }
+
 .container {
   background-color: $background-color;
   display: flex;

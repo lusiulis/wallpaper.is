@@ -1,4 +1,4 @@
-
+import { ItemsProvider } from '@app/context/ItemsContex';
 import Layout from '@components/layout';
 import About from '@pages/about';
 import Error from '@pages/error';
@@ -11,7 +11,14 @@ const appRouter = createBrowserRouter([
     errorElement: <Error />,
     path: '/',
     children: [
-      { path: '/', element: <Galery /> },
+      {
+        path: '/',
+        element: (
+          <ItemsProvider>
+            <Galery />
+          </ItemsProvider>
+        ),
+      },
       { path: '/about', element: <About /> },
     ],
   },

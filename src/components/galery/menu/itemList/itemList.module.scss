@@ -1,0 +1,44 @@
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  padding: 10px;
+
+  .folder {
+    .indentifier {
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-radius: 3px;
+      box-shadow: -5px -5px 1px #a3a3a3;
+    }
+  }
+
+  .item {
+    .indentifier {
+      margin-left: 4px;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      border-radius: 100%;
+    }
+  }
+
+  .node {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+    .indentifier {
+      cursor: pointer;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    .label {
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

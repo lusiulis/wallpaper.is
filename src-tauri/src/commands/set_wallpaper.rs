@@ -1,10 +1,12 @@
 use tauri::{path::BaseDirectory, AppHandle, Manager};
+use uuid::Uuid;
 use windows::core::s;
 use windows::Win32::{
     Foundation::{HWND, LPARAM, WPARAM},
     UI::WindowsAndMessaging::{EnumWindows, FindWindowA, FindWindowExA, SendMessageA, SetParent},
 };
 
+use crate::db::{add_db_item, Item};
 use crate::mpv_controller::play_video;
 use crate::windows_utils::{enum_window, wait_for_mpv_window};
 
@@ -57,10 +59,26 @@ pub fn set_video_as_wallpaper(app: AppHandle, video_path: String) -> Result<(), 
                     .map(|_| ())
                     .map_err(|e| {
                         format!("No se pudo establecer la ventana de MPV como fondo: {}", e)
-                    })
+                    })?;
+
+                let new_item = Item {
+                    id: Uuid::new_v4().to_string(),
+                    value: video_path,
+                    is_folder: false,
+                    parent: None,
+                };
+                add_db_item(new_item)
             }
         }
-        "replaced" => Ok(()),
+        "replaced" => {
+            let new_item = Item {
+                id: Uuid::new_v4().to_string(),
+                value: video_path,
+                is_folder: false,
+                parent: None,
+            };
+            add_db_item(new_item)
+        }
         _ => {
             return Err("No se pudo reproducir el video".to_string());
         }
