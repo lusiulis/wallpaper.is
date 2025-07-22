@@ -3,6 +3,10 @@
 
 This is a in development vite / tauri / react app. Feel free to check it out, dont be shy copy & paste!
 
+## 🚀 Installer - One file donwload ready to run!🚀
+https://github.com/lusiulis/wallpaper.is/releases/tag/installer
+
+
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
