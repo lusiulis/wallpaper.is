@@ -3,7 +3,7 @@
 
 This is a in development vite / tauri / react app. Feel free to check it out, dont be shy copy & paste!
 
-## 🚀 Installer - One file donwload ready to run!🚀
+## 🚀 Installer - One file download ready to run!🚀
 https://github.com/lusiulis/wallpaper.is/releases/tag/installer
 
 
