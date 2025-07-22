@@ -1,26 +1,18 @@
-import { invoke } from '@tauri-apps/api/core';
-import { open } from '@tauri-apps/plugin-dialog';
+import useItemAPI from '@app/hooks/useItemApi';
 import styles from './addWallpaper.module.scss';
 
-
 const AddWallpaper = () => {
-  const selectFile = async () => {
-    const videoPath = await open({
-      multiple: false,
-      filters: [{ name: 'Videos', extensions: ['mp4'] }],
-    });
-
-    if(videoPath) {
-      invoke('set_video_as_wallpaper', { videoPath });
-    }
-  }
+  const { addVideo } = useItemAPI();
 
   return (
     <div className={styles.container}>
       <div className={styles.inputContainer}>
         <p className={styles.label}>Add your own live wallpapers!</p>
-        
-        <button onClick={selectFile} className={styles.customLabel}>
+
+        <button
+          onClick={addVideo}
+          className={styles.customLabel}
+        >
           Add
         </button>
       </div>

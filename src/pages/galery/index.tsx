@@ -22,10 +22,10 @@ const Galery = () => {
           <div className={styles.text}>
             <h1>Wallpaper-is..!</h1>
             <p>
-              Wallpaper is a website that allows you to download wallpapers from
-              the internet. Make sure to check out the different categories and
-              search for your favorite wallpaper. Have fun and enjoy your
-              browsing!
+              Wallpaper.is an aplication where you can add your own live wallpapers
+              and share them with others. Save them in categories / folders and
+              share them with your friends. Wallpaper is a great way to personalize
+              your device and make it look great!
             </p>
           </div>
         </div>
