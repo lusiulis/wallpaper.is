@@ -1,12 +1,7 @@
-import { useState } from 'react';
-import addLogo from '@assets/icons/plus.png';
-import useItemAPI from '@app/hooks/useItemApi';
-
 import styles from './menu.module.scss';
-import ItemList from './itemList';
 
 const GaleryMenu = () => {
-  const [showAddFolder, setShowAddFolder] = useState<boolean>(false);
+  /*const [showAddFolder, setShowAddFolder] = useState<boolean>(false);
   const [searchItem, setSearchItem] = useState<string>('');
   const [newFolder, setNewFolder] = useState<string>('');
 
@@ -34,7 +29,7 @@ const GaleryMenu = () => {
 
   const searchItems = () => {
     searchStateItem(searchItem);
-  };
+  };*/
 
   return (
     <div className={styles.menu}>
